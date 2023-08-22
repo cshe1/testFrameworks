@@ -12,11 +12,13 @@
   <url>http://maven.apache.org</url>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.10.0</version>
+      <version>4.11.0</version>
     </dependency>
+
 
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <dependency>
@@ -25,6 +27,22 @@
       <version>7.8.0</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.13.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>7.13.0</version>
+      <scope>test</scope>
+    </dependency>
+
 
   </dependencies>
 
