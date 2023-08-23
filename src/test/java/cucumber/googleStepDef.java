@@ -8,6 +8,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.Objects;
+
 public class googleStepDef {
     private final WebDriver driver = new ChromeDriver();
     static String searchBar = "gLFyf";
@@ -24,7 +26,11 @@ public class googleStepDef {
 
     @Then("the url should be this")
     public void theUrlShouldBeThis() {
-        String str = driver.getCurrentUrl();
-        assert str == "https://www.google.com/search?q=Luna+Himemori&sca_esv=558984878&source=hp&ei=MEjkZJbIDpmUwbkPr_WNsAo&iflsig=AD69kcEAAAAAZORWQE06RVE-sMyAEpeYSCVMt3iVy-T2&ved=0ahUKEwiWoIj0xO-AAxUZSjABHa96A6YQ4dUDCAs&uact=5&oq=Luna+Himemori&gs_lp=Egdnd3Mtd2l6Ig1MdW5hIEhpbWVtb3JpSCFQAFgfcAB4AJABAJgBAKABAKoBALgBA8gBAPgBAQ&sclient=gws-wiz";
+         driver.findElement(By.xpath(("//textarea[@class='gLFyf' and @value ='Luna Himemori']")));
+    }
+
+    @Then("the driver should quit")
+    public void theDriverShouldQuit() {
+        driver.quit();
     }
 }
